@@ -37,7 +37,7 @@ export class ProductComponent{
       "available": "Yes",
       "price": 60.35,
       "rating": 3.5,
-      "imageUrl":"http://clipart-library.com/data_images/12472.jpg"
+      "imageUrl":"http://clipart-library.com/images_k/yellow-rose-transparent/yellow-rose-transparent-19.png"
       
    },
    {
@@ -47,7 +47,7 @@ export class ProductComponent{
       "available": "No",
       "price": 34.3565759869,
       "rating": 2.5,
-      "imageUrl":"http://clipart-library.com/data_images/12453.jpg"
+      "imageUrl":"http://clipart-library.com/newimages/rose-clip-art-22.png"
       
    } 
 ]
