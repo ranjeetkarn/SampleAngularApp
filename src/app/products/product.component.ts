@@ -1,19 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 
 
 @Component({
     selector: 'product-component',
-    templateUrl: './product.component.html'  
+    templateUrl: './product.component.html',
+    styles: ['thead {color : red;}']
+     
     //template: `My first Product Component`
 })
-export class ProductComponent{
+export class ProductComponent implements OnInit {
+ 
+   ngOnInit(): void {
+      console.log('I am from oninit');
+ }  
+
+ constructor() {
+    console.log('I am from Constructor');
+ }
+ 
+    
  pageTitle: string = 'Product List';
  imageHeight:number = 60;
  imageWidth: number = 60;
  imageMargin : number = 5;
  showImage : boolean = true;
- filterProduct : string = 'product filter';
+ filterProduct : string;
 
  toggleImages() : void {
   this.showImage = !this.showImage;

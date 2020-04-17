@@ -37,7 +37,7 @@
                     </tr>
                 </thead>
                 <tbody>                  
-                    <tr *ngFor = 'let product of products'>
+                    <tr *ngFor = 'let product of products | filterPipe : filterProduct'>
                         <td>
                            <img 
                            *ngIf = "showImage"
@@ -50,7 +50,7 @@
                         <td> {{product.productName | uppercase}} </td> 
                         <td>{{product.productCode}} </td>  
                         <td> {{product.available}}</td>  
-                        <td> {{product.price | currency : 'USD' : true: '1.2-4'}} </td>  
+                        <td> {{product.price | currency : 'CAD' : 'symbol': '1.2-4'}} </td>  
                         <td>{{product.rating}} </td>
                     
                     </tr>                   
