@@ -1,1 +1,5 @@
-<button><ng-content></ng-content></button>
+<button>
+  <ng-content select="[rda-prefix]"></ng-content>
+  <ng-content></ng-content>
+  <ng-content select=".rda-suffix"></ng-content>
+</button>
