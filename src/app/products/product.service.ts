@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 @Injectable({providedIn:'root'})
 export class ProductService {
 
-    private _productUrl = './api/product.json'
+    private _productUrl = './api/product.json';
+    //private _productUrl = 'https://microserviceapi20200420192412.azurewebsites.net/getImages'
     
 
 constructor(private _httpObject : HttpClient){
