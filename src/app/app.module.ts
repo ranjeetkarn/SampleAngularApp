@@ -11,13 +11,18 @@ import {HttpClientModule} from '@angular/common/http'
 import { RdaButtonModule } from './shared/components/rda-button/rda-button.module';
 import {RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
+import { ProductDetailComponent } from './products/product-detail.component';
+import { ProductDetailGuard } from './products/product.guard';
+
 
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ProductFilterPipe, WelcomeComponent],
+  declarations: [AppComponent, ProductComponent, ProductFilterPipe, WelcomeComponent, ProductDetailComponent],
+
   imports: [BrowserModule, FormsModule, HttpClientModule, RdaButtonModule,
     RouterModule.forRoot([
-      {path : 'product', component: ProductComponent},
+      {path : 'product', component: ProductComponent},  
+      {path : 'product/:id', canActivate: [ProductDetailGuard], component: ProductDetailComponent},    
       {path : 'welcome', component: WelcomeComponent},      
       
       {path : '', redirectTo: 'welcome', pathMatch:'full'},
@@ -25,8 +30,6 @@ import { WelcomeComponent } from './home/welcome.component';
       
       
     ])
-  
-  
   ],
   //providers: [ProductService],
   bootstrap: [AppComponent],

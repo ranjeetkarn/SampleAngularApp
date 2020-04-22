@@ -7,9 +7,7 @@ import { ProductService } from './product.service';
     selector: 'product-component',
     templateUrl: './product.component.html',
     styles: ['thead {color : red;}'],
-    //providers: [ProductService]
-
-     
+    //providers: [ProductService]     
     //template: `My first Product Component`
 })
 export class ProductComponent implements OnInit {
