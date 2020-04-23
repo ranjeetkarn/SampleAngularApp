@@ -1,7 +1,5 @@
 import { Component, Input, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
 
-
-
 @Component({
     selector : 'star-component',
     templateUrl:'star.component.html',
@@ -19,7 +17,7 @@ export class StarComponent implements OnChanges {
     @Output() ratingClicked : EventEmitter<string> = new EventEmitter<string>();
 
     ngOnChanges(): void {
-        this.starWidth = this.rating * 86/5;
+        this.starWidth = this.rating * 70/5;
     }
 
     onClick(): void {       
