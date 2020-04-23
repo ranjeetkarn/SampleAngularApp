@@ -34,6 +34,11 @@ export class ProductComponent implements OnInit {
    //console.log('I am from oninit');
 } 
 
+onNotify(message : string): void {
+            
+   this.pageTitle = 'Product List: ' + message;
+}
+
 //  products: IProduct[] = [
 //    {
 //       "productId": 1,

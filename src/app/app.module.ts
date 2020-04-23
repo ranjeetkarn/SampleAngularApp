@@ -13,11 +13,12 @@ import {RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductDetailGuard } from './products/product.guard';
+import { StarComponent } from './shared/star.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ProductFilterPipe, WelcomeComponent, ProductDetailComponent],
+  declarations: [AppComponent, ProductComponent, ProductFilterPipe, WelcomeComponent, ProductDetailComponent,StarComponent],
 
   imports: [BrowserModule, FormsModule, HttpClientModule, RdaButtonModule,
     RouterModule.forRoot([
